@@ -29,6 +29,9 @@ const home = document.querySelector('#l1')
 const about = document.querySelector('#l2')
 const projects = document.querySelector('#l3')
 const contact = document.querySelector('#l4')
+const h = document.querySelector('.h')
+const h1 = document.querySelector('.h1')
+const h2 = document.querySelector('.h2')
 
 
 
@@ -55,6 +58,9 @@ sliderContainer.addEventListener('click', ()=>{
     disabled2.classList.toggle('disabled2Dark')
     p3textcontainer.classList.toggle('p3textcontainerDark')
     p3text.classList.toggle('p3textDark')
+    h.classList.toggle('hDark')
+    h1.classList.toggle('hDark')
+    h2.classList.toggle('hDark')
 
     
 
@@ -75,20 +81,43 @@ sliderContainer.addEventListener('click', ()=>{
     pass1.classList.toggle('pass1Dark')
     p2title.classList.toggle('p2titleDark')
     img2.classList.toggle('img2Dark')
+    if(width<770){
+        if(title1.classList.contains('title1Dark')){
+            icon.className = "fas fa-moon fa-lg"
+            icon.style.color = 'whitesmoke'
+        }else{
+            icon.className = "fas fa-sun fa-lg"
+            icon.style.color= '#424242'
+        
+        }
+    }
 })
+let height = visualViewport.height
+let width= visualViewport.width
+console.log(height,width);
+
 home.addEventListener('click',()=>{
     scrollTo(0,0)
     
 })
 about.addEventListener('click',()=>{
-    scrollTo(0,713.6)
+    // scrollTo(0,713.6)
+    scrollTo(0,height)
     
 })
 projects.addEventListener('click',()=>{
-    scrollTo(0,1427.2)
+    scrollTo(0,height*2)
     
 })
 projects.addEventListener('click',()=>{
-    scrollTo(0,2140.8)
+    scrollTo(0,height*3)
     
 })
+ 
+
+
+if(width< 770){
+icon.className="fas fa-sun fa-lg" 
+console.log(title1);
+
+}  
