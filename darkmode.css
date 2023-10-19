@@ -303,7 +303,7 @@ h2,
 }
 .p3textDark{
     color: black;
-}
+} 
 
 @media screen and (max-width:770px){
     .menuContainer{
@@ -384,4 +384,9 @@ h2,
     }
     
     
+}
+@media(425px<= width <= 1024px){
+    .title1{
+        color: red;
+    }
 }
